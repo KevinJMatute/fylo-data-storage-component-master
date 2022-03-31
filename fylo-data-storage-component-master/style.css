@@ -1,0 +1,130 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+:root {
+  --primary-gradient: linear-gradient(
+    90deg,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  --card-color: hsl(228, 56%, 26%);
+  --buttons-color: hsl(229, 57%, 11%);
+  --text-color: hsl(243, 100%, 93%);
+  --text-color-second: hsl(229, 7%, 55%);
+  --border-cards: 8px;
+}
+
+/******* general styles *************/
+
+body {
+  margin: 0;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  color: var(--text-color);
+  background-image: url(/fylo-data-storage-component-master/images/bg-mobile.png);
+}
+img {
+  max-width: 100%;
+}
+p {
+  margin: 0;
+}
+
+/*********************** Card styles ***************/
+
+.box {
+  width: 20rem;
+  padding: 2.3rem;
+  margin: 0 auto;
+  border-radius: var(--border-cards);
+  background-color: var(--card-color);
+}
+.box-menu {
+  margin-top: 7rem;
+  margin-bottom: 1rem;
+  border-top-right-radius: 6rem;
+}
+.box-menu__logo {
+  margin-bottom: 1.5rem;
+}
+.box-menu__buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+}
+.box-menu__item {
+  width: 2.8rem;
+  height: 2.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--buttons-color);
+  cursor: pointer;
+}
+.box-storage__description {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+.box-storage{
+    position: relative;
+}
+.box-storage__display {
+  position: relative;
+  width: 100%;
+  height: 1.5rem;
+  margin-bottom: 0.6rem;
+  border-radius: 2rem;
+  background-color: hsla(229, 57%, 11%, 0.514);
+}
+.box-storage__display::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 3px;
+  border-radius: inherit;
+  background-image: var(--primary-gradient);
+}
+.box-storage__display::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 60%;
+  top: 20%;
+  left: 74%;
+  border-radius: inherit;
+  background-color: var(--text-color);
+}
+.box-storage__numbers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+.box-left-storage {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 4.5rem;
+
+  left: 5rem;
+  border-radius: var(--border-cards);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-color-second);
+  background-color: var(--text-color);
+}
+.box-left-storage__numbers{
+    font-size: 2rem;
+    color: var(--buttons-color);
+    margin-right: .5rem;
+}
+
+.attribution{
+    position: absolute;
+    bottom: 0;
+}
