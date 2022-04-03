@@ -19,9 +19,9 @@
 /******* general styles *************/
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
-  padding: 0.01px;
+  padding: 0.1px;
   font-size: 14px;
   font-family: "Raleway", sans-serif;
   color: var(--text-color);
